@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BlogPost } from "@/data/blogPosts";
 import { ArrowUpRight } from "lucide-react";
 
@@ -9,6 +10,7 @@ interface BlogCardProps {
 const BlogCard = ({ post, variant = "default" }: BlogCardProps) => {
   if (variant === "featured") {
     return (
+      <Link to={`/blog/${post.id}`}>
       <article className="group relative rounded-lg border border-border bg-card p-8 md:p-10 transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_40px_-10px_hsl(35_90%_55%_/_0.15)] cursor-pointer">
         <div className="mb-4 flex items-center gap-3">
           <span className="rounded-full bg-primary/10 px-3 py-1 font-body text-xs font-medium tracking-wide text-primary">
@@ -29,10 +31,12 @@ const BlogCard = ({ post, variant = "default" }: BlogCardProps) => {
           </span>
         </div>
       </article>
+      </Link>
     );
   }
 
   return (
+    <Link to={`/blog/${post.id}`}>
     <article className="group relative rounded-lg border border-border bg-card p-6 transition-all duration-400 hover:border-primary/30 hover:shadow-[0_0_30px_-10px_hsl(35_90%_55%_/_0.1)] cursor-pointer flex flex-col h-full">
       <div className="mb-3 flex items-center gap-3">
         <span className="rounded-full bg-secondary px-3 py-1 font-body text-xs font-medium tracking-wide text-accent">
@@ -51,6 +55,7 @@ const BlogCard = ({ post, variant = "default" }: BlogCardProps) => {
         <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
       </div>
     </article>
+    </Link>
   );
 };
 
