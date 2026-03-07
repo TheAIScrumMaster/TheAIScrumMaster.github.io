@@ -92,7 +92,13 @@ const Index = () => {
           <p className="font-body text-xs font-medium tracking-[0.2em] uppercase text-primary mb-8">
             About
           </p>
-          <div className="max-w-3xl">
+          <div className="max-w-3xl flex flex-col md:flex-row gap-10 items-start">
+            <img
+              src="/kevin-foster.jpg"
+              alt="Kevin Foster"
+              className="w-36 h-36 rounded-full object-cover object-top border border-border shrink-0"
+            />
+            <div className="flex-1">
             <h2 className="font-display text-4xl md:text-5xl mb-6">Kevin Foster</h2>
             <p className="font-body text-lg text-primary mb-2 tracking-wide">Scrum Master</p>
             <p className="font-body text-lg text-muted-foreground leading-relaxed mb-10">
@@ -113,6 +119,7 @@ const Index = () => {
                   Professional Scrum Master (PSM)
                 </span>
               </div>
+            </div>
             </div>
           </div>
         </div>
