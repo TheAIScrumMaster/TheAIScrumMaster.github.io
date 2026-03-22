@@ -659,4 +659,95 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    id: "9",
+    title: "Why Your Cycle Time Data Is Lying to You — and How AI Can Fix It",
+    snippet:
+      "Cycle time is one of the most trusted flow metrics in agile delivery. It's also one of the most misread. Here's what the raw numbers hide — and how AI surfaces the signal your team is missing.",
+    category: "Flow Metrics",
+    readTime: "7 min read",
+    date: "Mar 22, 2026",
+    content: [
+      {
+        type: "p",
+        text: "Cycle time has a credibility problem. Not because it's a bad metric — it's one of the most honest signals in agile delivery — but because most teams are reading it wrong. They're looking at averages when they should be looking at distributions. They're measuring elapsed time when they should be separating active time from wait time. They're treating a single cycle time number as a verdict on team performance when it's actually a composite of multiple work types, team configurations, and process states, all blended together into a figure that obscures more than it reveals. AI doesn't invent new cycle time data. It reads the data you already have more carefully than any human can sustain at scale.",
+      },
+      {
+        type: "h2",
+        text: "The Average Is the Enemy",
+      },
+      {
+        type: "p",
+        text: "The most common way teams consume cycle time data is the average. The average cycle time last sprint was 4.2 days. Is that good? Is it trending in the right direction? Should we be worried? The average doesn't tell you. What it hides is the distribution underneath it. If 80% of your items complete in two days and 20% take eighteen days, your average is around five days — and it's almost entirely meaningless as a planning input. The items completing in two days and the items taking eighteen days are not the same phenomenon. They're not responding to the same interventions. Treating them as a single population and averaging them together is like averaging the commute times of cyclists and freight trucks to understand traffic patterns. The number exists. It just doesn't tell you anything useful.",
+      },
+      {
+        type: "h2",
+        text: "Three Ways Cycle Time Data Gets Distorted",
+      },
+      {
+        type: "p",
+        text: "Beyond averaging, there are three specific distortions that make raw cycle time data unreliable — and that most teams don't have the bandwidth to identify manually.",
+      },
+      {
+        type: "p",
+        text: "The first is outlier contamination. A single item that sat in the backlog for six weeks before anyone noticed it was misclassified will pull your cycle time average dramatically upward. Teams often filter these outliers out manually, but the selection criteria for what counts as an outlier versus a legitimate slow item is inconsistent, subjective, and almost never documented. The result is that different people on the same team are looking at different effective cycle time numbers without realizing it.",
+      },
+      {
+        type: "p",
+        text: "The second distortion is work type mixing. A bug fix and a new feature capability are not the same kind of work. A spike and a deployment task are not the same kind of work. When you average cycle time across work types without segmentation, you're describing the center of a dataset that has no meaningful center. The distribution is multimodal — different peaks for different work types — and a single average sits in a valley between peaks, accurately describing almost nothing that actually happened.",
+      },
+      {
+        type: "p",
+        text: "The third distortion is blocked time. Cycle time in most tools measures elapsed time from 'in progress' to 'done.' But elapsed time includes the days an item sat waiting for a review, a dependency to clear, or a stakeholder decision that nobody chased. That wait time is not a team performance problem. It's a process and organizational problem. When blocked time is folded into cycle time, the metric conflates two entirely different root causes — and interventions aimed at one won't fix the other.",
+      },
+      {
+        type: "h2",
+        text: "How Humans Misread the Signal",
+      },
+      {
+        type: "p",
+        text: "The misreading isn't random — it follows predictable patterns. The most common is attribution error: a rising cycle time number gets blamed on team performance when the underlying cause is an increase in blocked time due to a new external dependency. The team works harder, adds more process, and the cycle time stays elevated because the actual problem is upstream. Nobody connected the dots because connecting those dots requires correlating multiple data streams simultaneously — work item state history, block flags, dependency tags, and team composition changes — across every item in the dataset, not just the ones that stood out.",
+      },
+      {
+        type: "p",
+        text: "The second common misread is trend over-indexing. A team sees cycle time drop two sprints in a row and concludes the process improvement is working. What actually happened is that the sprint contained a higher proportion of small bug fixes than usual, which naturally cycle faster. The underlying capability for complex feature work hasn't changed. The trend was real. The interpretation was wrong. Without work type segmentation, these false trends are nearly impossible to catch.",
+      },
+      {
+        type: "h2",
+        text: "What AI Does Differently",
+      },
+      {
+        type: "p",
+        text: "An AI agent working against your DevOps data doesn't get tired of segmenting. It doesn't round off outlier analysis because the sprint review is in twenty minutes. It doesn't misattribute a cycle time spike to the team because the alternative explanation — a slow dependency resolution from another team — requires a cross-referencing exercise that takes too long to do manually. AI handles the mechanical work of accurate cycle time analysis: segmenting by work type, separating active time from wait time, flagging statistical outliers with explicit criteria rather than gut feel, and surfacing trend lines that control for composition effects.",
+      },
+      {
+        type: "p",
+        text: "The output is a cycle time picture that's actually readable. Instead of a single average, you get a distribution with percentiles. Instead of one trend line, you get separate trend lines for different work types. Instead of a single cycle time figure, you get active time and wait time broken out — and when wait time spikes, the agent flags the items driving it and the patterns in why they were blocked. That's not a different metric. It's the same metric, read correctly.",
+      },
+      {
+        type: "h2",
+        text: "The Right Questions Cycle Time Should Answer",
+      },
+      {
+        type: "p",
+        text: "Properly analyzed cycle time data should be able to answer five questions that matter for delivery: What's the realistic completion time for an item of this type at the 85th percentile — meaning, what can we commit to with high confidence? Is our active work time trending up or down, controlling for work type mix? Where is wait time concentrated — which stages of our workflow have the most idle time? Are our outliers random, or do they share characteristics we can predict and prevent? And finally: is cycle time for complex work improving over time as we invest in technical practices, or is it flat in ways that suggest the investment isn't landing?",
+      },
+      {
+        type: "p",
+        text: "A raw average answers none of these questions. An AI-analyzed distribution answers all of them — and does it consistently, every sprint, without requiring a dedicated analyst.",
+      },
+      {
+        type: "h2",
+        text: "Making the Shift",
+      },
+      {
+        type: "p",
+        text: "The transition from raw cycle time to AI-analyzed cycle time doesn't require a new tool. It requires connecting your existing DevOps data to an AI agent with the right prompt structure and letting it run the analysis before your planning and review conversations. The output changes what questions you can ask and what conclusions you can draw — but only if you're willing to retire the average as your default view.",
+      },
+      {
+        type: "p",
+        text: "Start by asking your AI agent to segment your last three sprints of cycle time data by work type and surface the distribution for each type. Compare that picture to the averages you've been reporting. If they tell meaningfully different stories — and they almost always do — that's your signal that the data has been hiding something. The question then isn't whether to change the analysis. It's how quickly you can make the accurate picture the standard one.",
+      },
+    ],
+  },
 ];
