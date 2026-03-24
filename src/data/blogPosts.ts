@@ -750,4 +750,100 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    id: "10",
+    title: "Throughput Is the Metric Your Scrum Team Is Probably Ignoring",
+    snippet:
+      "Velocity gets all the attention in Scrum, but throughput — the number of items completed per sprint — is often a more honest signal. Here's why it matters, what it reveals, and how AI helps you use it without drowning in data.",
+    category: "Flow Metrics",
+    readTime: "8 min read",
+    date: "Mar 24, 2026",
+    content: [
+      {
+        type: "p",
+        text: "Most Scrum teams track velocity. They use it to forecast sprint capacity, report progress to stakeholders, and compare their output across sprints. The problem is that velocity — story points completed per sprint — is a composite of team estimation habits, work complexity, and delivery pace all rolled into a single number. Throughput strips that down. It asks one question: how many items did the team complete? No points, no sizing, no estimation overhead. Just items in versus items out. That simplicity is deceptive. Throughput is one of the most powerful forecasting and diagnostic tools in agile delivery, and most teams are either not measuring it or treating it as a secondary metric that doesn't need its own attention.",
+      },
+      {
+        type: "h2",
+        text: "What Throughput Actually Measures",
+      },
+      {
+        type: "p",
+        text: "Throughput measures the rate at which a system completes work items over a fixed time period — typically per sprint or per week. In a Scrum context, that means counting the number of stories, bugs, or tasks that moved to Done within the sprint window, regardless of size. A two-point story and an eight-point story both count as one completed item. That's both the strength and the limitation of the metric. It's insensitive to effort, which makes it useless for measuring how hard the team worked, but highly useful for understanding how the delivery system flows.",
+      },
+      {
+        type: "p",
+        text: "Because throughput is effort-agnostic, it's a cleaner signal for forecasting than velocity. Monte Carlo simulation — the statistical technique that generates probabilistic delivery forecasts — runs on throughput data. Feed it twelve to sixteen sprints of historical throughput and it will tell you the probability distribution of how many items you'll complete in the next sprint, the next quarter, or by a specific date. That's a materially different and more honest forecast than multiplying average velocity by sprint count and presenting the result as a commitment.",
+      },
+      {
+        type: "h2",
+        text: "Why Velocity Gets in the Way",
+      },
+      {
+        type: "p",
+        text: "The relationship between velocity and throughput is worth understanding because they often tell contradictory stories — and when they do, it usually means something important is happening in the team's estimation or work breakdown practices.",
+      },
+      {
+        type: "p",
+        text: "Consider a team whose velocity increases from 32 points to 44 points between Sprint 4 and Sprint 8, while throughput stays flat at nine items per sprint. Most stakeholders looking at the velocity trend would conclude the team is accelerating. The more likely explanation is that story sizing has drifted upward — items are being estimated larger without a corresponding increase in delivery rate. The delivery system hasn't changed. The numbers have. Velocity rewarded the estimation drift and masked it as progress. Throughput was immune to it.",
+      },
+      {
+        type: "p",
+        text: "The inverse also occurs. Teams that deliberately break work into smaller stories to reduce batch size will often see velocity drop while throughput increases. Flow is improving — smaller items complete faster, unblock downstream dependencies sooner, and reduce the WIP burden on the team. But leadership watching velocity will interpret the declining points as a productivity problem and push back, potentially undoing the improvement. Throughput tells the real story.",
+      },
+      {
+        type: "h2",
+        text: "What Throughput Reveals About Your Delivery System",
+      },
+      {
+        type: "p",
+        text: "Throughput data, read correctly, is a diagnostic tool as much as a planning input. Four patterns in particular are worth monitoring:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Consistent throughput with high velocity variance: story sizing is inconsistent, but the delivery system is stable — a planning and estimation problem, not a flow problem",
+          "Declining throughput with increasing WIP: the team is taking on more work than it can finish, likely due to scope pressure or poor sprint planning discipline",
+          "High throughput variance sprint over sprint: the team's flow is unstable — look for interruptions, unplanned work, or dependency blockages as the root cause",
+          "Throughput improvement after work item decomposition: smaller stories are flowing faster, validating the breakdown investment even if velocity metrics look worse",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How AI Turns Throughput Data Into Actionable Intelligence",
+      },
+      {
+        type: "p",
+        text: "The challenge with throughput analysis is not collecting the data — Azure DevOps, Jira, and most modern ALM tools track item completion by sprint automatically. The challenge is making sense of the patterns at the pace delivery moves. Manual throughput analysis requires pulling sprint data, building a distribution, running the simulation, and interpreting the results in time for it to influence sprint planning or stakeholder conversations. Few Scrum Masters have the bandwidth to do this consistently, which is why throughput tends to get discussed retrospectively rather than prospectively.",
+      },
+      {
+        type: "p",
+        text: "An AI agent changes that calculus. Configured to pull sprint completion data after each sprint closes, it can generate a throughput distribution, run a Monte Carlo simulation against the current backlog, and surface the results before sprint planning begins. The output — a probability range for how many items the team can complete over the next three sprints — becomes the basis for a more honest capacity conversation. Instead of committing to a point target based on average velocity, the team is working from a probability distribution that reflects historical variability.",
+      },
+      {
+        type: "h2",
+        text: "Using Throughput for Stakeholder Forecasting",
+      },
+      {
+        type: "p",
+        text: "Stakeholder forecasting is where throughput-based Monte Carlo simulation delivers its clearest value. The typical stakeholder question — when will this feature be done? — is unanswerable with precision, and answering it with false precision (\"Sprint 14\") creates more risk than transparency. Monte Carlo reframes the answer probabilistically: based on historical throughput, there is a 70% probability of completing these twelve items within four sprints, and a 90% probability of completing them within six sprints. That's a forecast stakeholders can plan around. It communicates uncertainty without abandoning accountability.",
+      },
+      {
+        type: "p",
+        text: "The AI agent's role in this workflow is to keep the simulation current. Every sprint that closes adds a new throughput data point, which updates the distribution and shifts the probability curves. A team that's been completing ten items per sprint but slows to six in consecutive sprints will see the forecast intervals widen — and the agent can flag that shift proactively, giving the Scrum Master the data needed for a difficult stakeholder conversation before the deadline arrives rather than after.",
+      },
+      {
+        type: "h2",
+        text: "Getting Started",
+      },
+      {
+        type: "p",
+        text: "You don't need a custom AI agent to start using throughput well. Begin by pulling twelve sprints of item completion data from your ALM tool — not points, just counts. Build a simple run chart. Look at the distribution: what's the average, what's the spread, and are there any outlier sprints that skew the picture? If the distribution is reasonably stable, you have enough history for Monte Carlo forecasting. Free tools like ActionableAgile or Troy Magennis's Excel-based simulators can run the simulation against your backlog in minutes.",
+      },
+      {
+        type: "p",
+        text: "Once you've run the analysis manually a few times and understand what the output means, automating it with an AI agent is a straightforward next step. The goal isn't to remove the judgment — it's to make the data available at the moment you need it, every sprint, without requiring two hours of manual work to produce. Throughput is a simple metric. Using it well is a practice. And like most delivery practices, it compounds: the longer you track it, the more useful the history becomes.",
+      },
+    ],
+  },
 ];
