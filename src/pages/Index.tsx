@@ -64,27 +64,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="border-t border-border">
-        <div className="container mx-auto px-6 py-20 text-center">
-          <h2 className="font-display text-3xl md:text-4xl mb-4">
-            Stay ahead of the shift
-          </h2>
-          <p className="font-body text-muted-foreground max-w-md mx-auto mb-8">
-            Weekly insights on AI-augmented delivery, flow metrics, and the evolving Scrum Master role.
-          </p>
-          <div className="flex items-center justify-center gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 rounded-full border border-border bg-card px-5 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50"
-            />
-            <button className="rounded-full bg-primary px-6 py-3 font-body text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* About */}
       <section id="about" className="border-t border-border">

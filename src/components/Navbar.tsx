@@ -12,9 +12,6 @@ const Navbar = () => (
         <a href="#for-managers" className="hover:text-foreground transition-colors">For Managers</a>
         <a href="#about" className="hover:text-foreground transition-colors">About</a>
       </div>
-      <button className="rounded-full bg-primary px-4 py-2 font-body text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
-        Subscribe
-      </button>
     </div>
   </nav>
 );
