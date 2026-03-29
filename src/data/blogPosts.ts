@@ -950,4 +950,107 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    id: "12",
+    title: "The 30-Minute Sprint Planning Prep Checklist — Automated with AI",
+    snippet:
+      "Sprint planning fails before it starts when the Scrum Master walks in unprepared. Here's the complete prep checklist — and how to automate most of it with AI so you spend 30 minutes on judgment, not data gathering.",
+    category: "AI Workflows",
+    readTime: "9 min read",
+    date: "Mar 29, 2026",
+    content: [
+      {
+        type: "p",
+        text: "Bad sprint planning is almost always a preparation problem, not a meeting problem. When the backlog isn't refined, when capacity hasn't been calculated, when last sprint's carry-over hasn't been acknowledged, the planning session becomes a two-hour conversation that could have been a 30-minute decision. The Scrum Master who walks into planning with complete, accurate inputs changes the entire character of the meeting. The team makes decisions instead of gathering data. They commit to a sprint goal instead of negotiating an item list. The difference between those two outcomes is almost entirely determined by what happens in the 24 hours before planning begins.",
+      },
+      {
+        type: "h2",
+        text: "The Problem with Manual Prep",
+      },
+      {
+        type: "p",
+        text: "Most Scrum Masters know what good sprint planning prep looks like in theory. Pull the velocity history. Calculate available capacity. Review the top of the backlog for readiness. Check for carry-over from last sprint. Confirm the sprint goal candidate with the Product Owner. In practice, this work gets compressed, skipped, or done poorly because it requires pulling data from multiple sources, doing manual calculations, and having conversations that are hard to schedule in the final hours before planning. The result is planning sessions that spend the first 30 minutes doing the prep work that should have been done beforehand.",
+      },
+      {
+        type: "p",
+        text: "AI doesn't eliminate the judgment required for sprint planning prep. It eliminates the data gathering. With the right setup, an AI agent can assemble the inputs for planning in minutes — pulling velocity, calculating capacity, surfacing backlog readiness signals, and flagging carry-over — so that the Scrum Master's 30 minutes before planning is spent interpreting and deciding rather than compiling and calculating.",
+      },
+      {
+        type: "h2",
+        text: "The Complete Prep Checklist",
+      },
+      {
+        type: "p",
+        text: "There are seven inputs every sprint planning session needs. Missing any of them creates a gap that the meeting will have to fill in real time, at the cost of everyone's focus and patience.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Velocity history: last 6 sprints of completed points or items, with trend direction",
+          "Available capacity: team members present, planned time off, ceremonies, and known interruptions factored in",
+          "Carry-over assessment: items not completed last sprint, with a disposition recommendation for each",
+          "Backlog readiness check: top 10-15 items reviewed for acceptance criteria completeness and dependency clarity",
+          "Sprint goal candidate: a draft goal aligned to current product priorities, confirmed with the Product Owner",
+          "Dependency map: any items in the candidate sprint that have external dependencies, with status of each",
+          "Definition of Done review: confirm DoD is current and the team hasn't outgrown it since the last update",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What AI Can Automate",
+      },
+      {
+        type: "p",
+        text: "Of those seven inputs, five can be substantially automated with an AI agent connected to your backlog tool. The remaining two — sprint goal candidate and Definition of Done review — require human judgment and conversation, but they're also the two that benefit most from having the other five already done.",
+      },
+      {
+        type: "p",
+        text: "Velocity history is the easiest automation. Your backlog tool already tracks completed items per sprint. An AI agent can pull that data, calculate the rolling average, identify the trend, and format it for presentation in seconds. No spreadsheet required. The agent can also apply a configurable smoothing factor to strip out outlier sprints — a sprint interrupted by a company all-hands or a team offsite shouldn't anchor your capacity planning.",
+      },
+      {
+        type: "p",
+        text: "Available capacity requires slightly more configuration but is highly automatable once set up. The agent pulls the sprint calendar, cross-references it against team member time-off data (from your HR or calendar system), subtracts a configurable percentage for ceremonies and overhead, and outputs a capacity number in hours or story points. The first time you set this up takes an hour. Every sprint after that takes zero minutes.",
+      },
+      {
+        type: "p",
+        text: "Carry-over assessment is where AI adds the most judgment value beyond simple automation. The agent identifies items that didn't complete last sprint, calculates what percentage of the sprint commitment they represented, and generates a recommendation for each: carry forward as-is, re-estimate, split, or return to backlog. The recommendation logic is configurable — you define the rules, the agent applies them consistently. A Scrum Master reviewing five carry-over recommendations takes five minutes. Building those recommendations from scratch takes thirty.",
+      },
+      {
+        type: "h2",
+        text: "Automating Backlog Readiness",
+      },
+      {
+        type: "p",
+        text: "Backlog readiness is the prep input that most directly determines planning quality — and the one most teams assess inconsistently. The question is simple: does each candidate item have clear acceptance criteria, a reasonable size estimate, and no unresolved dependencies? In practice, answering that question for 15 items requires opening each one, reading the description, checking the acceptance criteria field, and noting what's missing. For a senior Scrum Master this takes 20 minutes. For a junior one it takes 45, and the assessment quality varies.",
+      },
+      {
+        type: "p",
+        text: "An AI agent can perform a readiness scan of the top backlog items in under a minute. It checks for acceptance criteria presence and length, flags items with no estimate or wildly inconsistent estimates relative to similar past items, identifies items tagged as blocked or dependent on other unfinished work, and outputs a readiness score for each item. The score isn't a verdict — it's a conversation starter. Items flagged as not ready get a refinement conversation before they're pulled into planning. Items that pass the readiness check move forward with confidence.",
+      },
+      {
+        type: "h2",
+        text: "The Two Inputs That Stay Human",
+      },
+      {
+        type: "p",
+        text: "The sprint goal candidate cannot be automated — and shouldn't be. The sprint goal requires understanding the current product strategy, stakeholder priorities, and delivery context in a way that no AI agent has unless it's been given significant organizational context. What AI can do is prompt the conversation earlier. The agent can surface the top themes in the candidate backlog items and generate a draft goal framing for the Product Owner to react to. That draft is usually wrong in interesting ways — which is exactly what makes it a useful starting point for the PO conversation the day before planning.",
+      },
+      {
+        type: "p",
+        text: "Definition of Done review is a judgment call about team maturity and current delivery context. The agent can surface the current DoD and flag how many sprints it's been since it was last updated — a useful prompt that teams often ignore until something goes wrong. But whether to update it, and how, requires the kind of team conversation that no automated checklist can replace.",
+      },
+      {
+        type: "h2",
+        text: "Putting It Together: The 30-Minute Prep Session",
+      },
+      {
+        type: "p",
+        text: "With automation handling the data gathering, the Scrum Master's pre-planning session looks like this: review the AI-generated velocity and capacity summary (5 minutes), review carry-over recommendations and make disposition decisions (5 minutes), review the backlog readiness scan and flag items that need a quick refinement conversation (10 minutes), confirm the sprint goal candidate with the Product Owner (5 minutes), scan the dependency map for anything that needs a same-day conversation (5 minutes). That's 30 minutes of judgment work on top of a foundation that the AI assembled automatically.",
+      },
+      {
+        type: "p",
+        text: "The planning session itself changes when the prep is this complete. The team doesn't spend the first 30 minutes figuring out capacity — the Scrum Master presents it. They don't debate whether items are ready — the readiness scan has already filtered the list. They don't relitigate last sprint's carry-over — the disposition decisions were made before the meeting started. What's left is the actual work of sprint planning: agreeing on a goal, selecting the right items, and making a realistic commitment. That's a 45-minute conversation, not a two-hour negotiation.",
+      },
+    ],
+  },
 ];
